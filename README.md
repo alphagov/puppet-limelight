@@ -1,4 +1,4 @@
-[puppet-limelight](https://github.com/alphagov/puppet-limelight)
+# [puppet-limelight](https://github.com/alphagov/puppet-limelight)
 
 Puppet module for setting up a machine for the [limelight](https://github.com/alphagov/limelight) application.
 
@@ -12,3 +12,16 @@ It does not: (and therefore must be done manually for the moment)
 - Copy the application code into `/opt/limelight`
 - Copy correct configuration files into place
 - Run bundle install
+
+## Usage
+
+### `limelight::app`
+
+```puppet
+limelight::app { 'limelight':
+	port        => 3038,
+  user        => 'deploy',
+  group       => 'deploy',
+  domain_name => 'everywhere',
+}
+```
